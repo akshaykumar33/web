@@ -1,0 +1,353 @@
+:root{/*keep it as can be used globally mention any variables inside
+    it but starts with -- */
+    --primary-color:teal;
+    --btn-color:blueviolet;
+    --text-color:white;
+}
+body{
+    background-color: linear-gradient(red,green,blue,violet);
+}
+p{
+  
+    font-family: 'Times New Roman', Times, serif;
+   color:rgba(0,0,0,0.5);
+   
+
+}
+#firstp{
+    
+    background-color:hsla(156, 5%, 23%, 0.82);
+    padding: 5px;
+
+    
+    
+}
+body{
+    background-image: url('https://img.freepik.com/premium-photo/gost-halloween-ghostlyly-white-ghost-friendly-ghost-casper_915367-30099.jpg?w=740');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: dimgrey;
+    background-size:100% 100%;
+    background-attachment: fixed;
+    margin-top: 30%;
+   /* directly used all with background: */
+}
+/*
+RGB,
+RGBA,a is for transperancy 0 full transparent 1 no transparent
+HEX,#rrggbb (00 till ff)
+HSL,hue-0 to 360 degree  ,saturation-0%(shade of grey till 100(full color) ,lightness-0% is black, 50% neighter dark or light and 100% white
+HSLA,same hsl just with alpha
+*/
+
+main{
+     border-style: solid dashed  dotted;/* anywhere if u have 4 properties than t r b l but if 2 than 1st for tb and 2nd for lr inshort clockwise */
+     border-width :5px 10px;
+     border-color:green yellow blue ; 
+     /*you can have shirtcut of above as border:5px solid green*/
+}
+
+article{
+    background-color: yellowgreen;
+    color:beige;
+    /*max and min are self explanatory
+      % take to be as per parent    
+    */
+}
+/*Box model says how much area is occupied by box of content overall
+like including width,height,padding,margin and border*/
+
+aside{
+    vertical-align:5px;
+     direction:rtl;
+     text-decoration: wavy;
+     text-transform: capitalize;
+     line-height: 10 px;
+     text-indent: 3px;
+     letter-spacing: 2px;
+     word-spacing: 2px;
+     white-space: pre;/*it will maintain as u gave in 
+     input html normally extra space or more space are not  
+     taken in view but with whittespace we can deal out all this
+     
+     break-word for white-space is used such as 
+     to make sure thw word not crosses container*/
+}
+
+nav{
+    text-shadow:5px 4px 7px red;/* horizontal vertical shadow color*/
+    writing-mode:vertical-lr;/* we can write in vertical mode aswelleith left to right or vise versa*/
+}
+a{
+    text-decoration: none;
+   background-color:lightcoral;
+   padding:10px 20px;
+   box-sizing:border-box;
+}
+a:link{
+ color:rgb(54, 190, 41);
+}
+a:visited{
+color:black;
+}
+a:hover{
+display:inline-block;
+text-align:center;
+vertical-align: middle;
+transform:translate(50px,60px);
+}
+a:active{
+color:violet;
+}
+footer{
+    /* font-family:"akp";name what u gave ti resorce font family */
+    /* src:url();give url for this font family */
+    /*font:italic small-caps 600 20px "calibra"  this is short hand*/
+   /*absolute (Cm,Mm,Inch,Px(1inch=96px),Pt(1inch=72pt),Pc(1pc=12pt);
+   relative(Em-em is relative to size of it's direct parent,Rem-is only relative to root html tag size,Vh-1% of viewport height
+   ,Vw-15 of view port width,%-relative to parent )*/
+   /*cursor can take multiple type of cursor pointers*/
+   /*!important -it will ake that css as important and forget all priority*/
+   /*box-shadow,opacity while filter is only with image  with 
+   mutliple different vals like blur(10px) can be used and can also use multiple properties with , seperated */
+   /*for multiple images make , asimalrly for multiple shadow add properties in similar fashion with ,*/
+   /*image sprite is only applicable on background and mostly used for
+   small images is combine together  and it also reduce page load time*/
+}
+section{
+    /*linear and radial gradient*/
+    height:500px;
+    border:1px solid gray;
+    background-image: linear-gradient(red,yellow,green);
+    /*gradient have many thing like circle how many colors or degree,percentages from to etc
+    */
+    /*overflow is regarding components under given content
+    u cn even do overflow-x:,overflow-y,auto is great*/
+    /*resize is only for block elements and it can be resized when anything apart from visible */
+    
+}
+ul{
+    /* list-style-type: disc; */
+    
+    list-style-image:url('user.png');/*can be used in oth ordered and unorderedlist 
+    instead of default thing we can use images there*/
+    list-style-position:inside;/*where u want those pointers 
+    like bullet point inside or outside border check by making border*/
+}
+ol{
+   list-style-type:decimal-leading-zero;
+}
+li{
+    border:solid 2px rgb(18, 222, 236);
+}
+table{
+border-width: 3px;
+border-color:rgb(227, 9, 118);
+border-style: dotted;
+border-collapse: collapse;/*it is to merge all tables border evenly*/
+/* border-spacing:,vertical-align:*/
+/*empty-cells:hide it will hide if there is no content in td*/
+/*table-layout: this will make sure how the layout should look like*/
+}
+caption{
+border:solid 2px rgb(0, 255, 8);
+/*caption-side: where u want to place captions*/
+}
+th{
+border:solid 2px rgb(21, 56, 197);
+}
+tr{
+border:solid 2px rgb(196, 216, 14);
+}
+td{
+border:solid 2px rgb(224, 23, 228);
+}
+/*functions in css like linear-gradient,rgb etc....*/
+#fun{
+    width:calc(100%-200px);/*calculation*/
+    background-color: var(--primary-color);
+}
+#div1{
+background-color: var(--primary-color);
+width:150px;
+height:250px;
+}
+
+#div2{
+    background-color:yellow;
+    width:150px;
+    height:250px;
+    padding:10px;
+    margin:10px;
+    box-sizing:border-box /*when u do this  height and width will be measured including 
+    border so content effects */
+    /*initial is default behaviour and inherit is taking parent properties*/
+    /*object-fit is applicable on image or video
+    contain will maintain aspect ratio and show  will
+    fill image in box and reduce aspect ratio while cover will maintain
+    aspect and fill the box but image is cut out yet we can 
+    specify which part of it like object-position:top center */
+}
+/*any selector:pseudo class i.e state ex:a:hover*/
+/*any selector::pseudo elements ex:p::first-letter*/
+h1::before{
+    content: url(user.png);
+}
+h1::after{
+    font-size: xx-small;
+    content:"I'm an after";
+}
+/*before and after are best way of writing content directlt from css*/
+
+::selection{   /*no selector means it's universal*/
+    color:aqua;
+    
+}
+/*display properties are block; inline; inline-block; none.
+block(div,p,h1,form)-
+newline,full width,heigh and width changeable
+inline(a,img,span)-
+same line,no full width ,no height width but in image we just adjust it's content's thing
+inline-block-
+same line,no full width but height and width is there
+*/
+/*display:none it rmoved completely 
+but in visibility:hidden it takes  space but just make invisible */
+/*positionings to make a position element
+static by default by css and no TLBR,
+relative it will move in TLBR of it's
+ current default position and it's position can't be occupy by another,
+fixed it is fixed as per viewport,
+absolute /* relative to any nearest position parent i.e non static
+if nothing  it will move as per body tag and other element cn occupy it's position
+*/
+/*
+  layers
+  z-index: the more number the more priority
+*/
+/*floats and clear
+float moves element and it brings list out of 
+it container to save that use over-flow: auto in parent
+clear is to say that it will not be at that float position of above given
+*/
+/*css 2d tranform applicable to only block and inline-block
+   translate(how much change from x,how much chnage from y)
+   rotate(degreee),scale(x-axis,y-axis),skew(degree,degree)
+   we can also have transform-origin from  which point to change degree;
+   matrix is a shorthand but better check online read and do accordingly 
+*/
+/*css 3d transform
+u can check things online on 3dtransformsdesandro.cm/perspective
+for visualizing 
+transform:perspective(position) rotate(different synatx accordingly);
+perspective-origin:
+*/
+
+/* transitions
+ which property to apply on duration;
+ transition-property:any attribute,mulitple properties on comma seperated;can also write all
+ transition-duration:1s or 100ms ;
+ transition-delay:50ms after how much time;
+ tansition-timing-function:many other things
+  transition:syntax as per it is a shhorthand
+*/
+
+/*css animation started from css-3 and also without js
+
+@keyframes anynameucangive{
+ from{ whichever properties to start} instead of from u can give 100% 
+ to{whiever ends} instead of to ucan give 0%
+}
+#anyid{
+animation-duration:anynameucangive(the above name);
+animation-duration;2s
+animation-delay:1ms;
+animation-iteration-duration:how many times in number or infinite
+animation-direction:reverse (opposite to given ) alternate(forward than back),altrnatereverse(back than forw);
+animation-timing-function:same things as per transition
+}
+*/
+/*prints in css
+introduced in css2
+@media screen{ //screen specific ,by default this works for both
+}
+@media print{  /print specific useful when u take print by ctrl+P
+}
+
+*/
+/* responsive web design 
+// view port meta tag
+the meta tag given in header content should be as per device width and zooming should be normal
+
+//media queries came in css3
+check online your viewport size of current online
+@media screen and (max-width:768px) u can add more and ,or here mix with it{
+ all properties inside it is valid till maximum 768 nothing above it 
+}
+min-width:400px anything after and including 400 px
+can mix like 
+*/
+/*fountaion css,bootstrap,pure css,skeleton css*/
+/*class or id or element or [attributes any]*/
+/*
+      *{ univeral slector
+      }
+
+      //combinatory slector
+      parent>child direct child
+      parent child any child
+      //adjacent combinator
+      parent + sib adjacent
+      //general combinator
+      parent~siblin
+      //parent1,parent2  says multiple by and
+*/
+
+
+/*specificity
+ if different styles on same in differnt way are given 
+ than more specific will be applied
+rules:
+!importand will ovveride everything
+inline can overide everything expect !important
+external will work accoding to specificty
+#-id most specificty
+*-universal slector least 
+in extrnal the more the points it get more priority
+if same points the most down one will get applied
+*/
+
+
+/*
+column-rule: etc as per syntax and other sub parts*/
+
+/*Flexbox
+dsiplay:flex;
+flex-direction:
+flex-wrap: extra items will go down 
+flex-flow:direction which   wrap or not 
+justify-content: how to place elements
+ among each other and container and it works in Horizontal
+align-items: where to move childs among parent ;
+align-content: it works in vertical way;
+*/
+
+/* Grid
+   grid works for 2d alignment and flex in space distribution
+   display:grid;inline-grid
+   grid-template-column:any columns so for each column specify with space separated value
+  grid-column-gap:;grid-row-gap:;
+   justify-content:;align-content:;
+   grid-column-start:where it starts from;grid-column-end:where it ends
+   grid-column:1 / span 3;
+   grid-row:1 /span 3  or 1/4
+   grid-area:1/2/4/5 or 1/2/span 2 /span 4
+   in parent 
+   grid template-areas::after" write name that many times u want "
+   "same " continues an number of this depends on number of rows
+   in child write grid-area:"give any name and use that in parent"
+*/
+
+/*css validation 
+same as html validation same website and process
+*/
