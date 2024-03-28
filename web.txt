@@ -1,0 +1,5 @@
+<input type="color"/>
+//ALt+shift+down arrow to compy ooon second line
+//we can import in css directly and use them
+//mix-blend-mode in css
+//is() selector

@@ -1,0 +1,58 @@
+#####REACT#########
+class App extends Component{
+   1st// constructor(){ //before load or cDM
+        super();
+        this.state={
+            count:0; 
+        }
+    }
+   3rd// componentDidMount(){ //load and render for very first time
+
+    }
+   
+    componentWillUnmount(){//do return inside useEffect as return ()=>{}
+  
+    }
+shouldComponentUpdate(nextProps,nextState){
+return true
+}
+    increment(){
+        this.setState({count:this.state.count+1})
+    }
+    static getDerivedStateFromProps(props,state){
+ return null
+    }
+    getSnapshotBeforeUpdate(prevProps,prevState){
+return null
+    }
+   2nd// render(){
+        return( //browser doesn't understand jsx but it is converted into undrstandable by transpiler Babel
+            <div>
+            <Counter number={this.state.count}/>
+            
+            //Es5
+            <button onClick={this.increment.bind(this)}>click me</button>
+            //ES6
+            <button onClick={()=>{this.increment()}}>click me</button>
+
+            </div>
+        )
+    }
+}
+
+
+ class Counter{
+        constructor{
+
+        }
+         4th //componenntDidUpdate(prevprops,prevState){ //useEffect with [dependencies]
+        if(prevprops.number!=this.props.number){
+            console.log("componenntDidUpdate")
+        }
+    }
+    render{
+        return(
+            <h1>{this.props.number}</h1>
+        )
+    }
+    }
